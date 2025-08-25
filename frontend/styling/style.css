@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.movie-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-info h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.movie-rating {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Carousel */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+#movie-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#carousel-pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #717171;
+}
+
+/* Modal */
+#ratingModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: black;
+}
+
+.rating-stars i {
+    font-size: 24px;
+    color: #f39c12;
+    cursor: pointer;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.submit-rating {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-rating:hover {
+    background-color: #2980b9;
+}
